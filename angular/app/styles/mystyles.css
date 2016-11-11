@@ -1,3 +1,4 @@
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px;
@@ -11,12 +12,12 @@
 .row-footer {
   margin: 0px auto;
   padding: 20px 0px;
-  background-color: #AfAfAf;
+  background-color: #F2D388;
 }
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #7986CB;
+  background: #A7D2CB;
   color: floralwhite;
 }
 .carousel {
@@ -32,44 +33,45 @@
   top: 0;
 }
 .navbar-inverse {
-  background: #303f9f;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .active > a {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .active > a:hover {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .open > a {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .open > a:hover {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background: #1a237e;
-  color: #ffffff;
+  background: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-  background-color: #303f9f;
-  color: #eeeeee;
+  background-color: #218380;
+    color: floralwhite;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
   color: #000000;
 }
 .navbar-inverse .navbar-nav .open .dropdown-menu {
-  background-color: #303f9f;
-  color: #eeeeee;
+  background-color: #874c62;
+  color: floralwhite;
 }
+
 address {
   color: #0f0f0f;
   font-size: 80%;
@@ -79,6 +81,7 @@ body {
   align: center;
   padding: 50px 0px 0px 0px;
   z-index: 0;
+    background-color: floralwhite
 }
 .tab-content {
   border-bottom: 1px solid #dddddd;
@@ -94,3 +97,8 @@ body {
   position: absolute;
   right: 0px;
 }
+
+
+ /* TODO:
+    Create reveration model home page
+    Menu : delete button , add new button, in menu  */
