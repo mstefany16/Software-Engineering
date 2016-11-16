@@ -1,7 +1,6 @@
 {
   "name": "conFusion",
   "private": true,
-  "main" : "server/app.js",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "del": "^2.0.2",

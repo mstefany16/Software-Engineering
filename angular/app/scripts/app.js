@@ -1,10 +1,9 @@
-( function () {
-  'use strict';
+'use strict';
 
 angular.module('confusionApp', ['ui.router','ngResource','ngDialog'])
 .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-
+        
             // route for the home page
             .state('app', {
                 url:'/',
@@ -23,25 +22,25 @@ angular.module('confusionApp', ['ui.router','ngResource','ngDialog'])
                 }
 
             })
-
+        
             // route for the aboutus page
             .state('app.aboutus', {
                 url:'aboutus',
                 views: {
                     'content@': {
                         templateUrl : 'views/aboutus.html',
-                        controller  : 'AboutController'
+                        controller  : 'AboutController'                  
                     }
                 }
             })
-
+        
             // route for the contactus page
             .state('app.contactus', {
                 url:'contactus',
                 views: {
                     'content@': {
                         templateUrl : 'views/contactus.html',
-                        controller  : 'ContactController'
+                        controller  : 'ContactController'                  
                     }
                 }
             })
@@ -67,7 +66,7 @@ angular.module('confusionApp', ['ui.router','ngResource','ngDialog'])
                    }
                 }
             })
-
+        
             // route for the dishdetail page
             .state('app.favorites', {
                 url: 'favorites',
@@ -78,7 +77,7 @@ angular.module('confusionApp', ['ui.router','ngResource','ngDialog'])
                    }
                 }
             });
-
+    
         $urlRouterProvider.otherwise('/');
-    });
-} )();
+    })
+;
