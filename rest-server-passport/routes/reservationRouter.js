@@ -27,7 +27,7 @@ reservationRouter.route('/reserve')
     Reservations.find(req.query)
       .populate('postedBy')
       .exec(function (err, reservation) {
-        if (err) next(err);
+        if (err) return next(err);
         res.json(reservation);
     });
 })
