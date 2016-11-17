@@ -56,15 +56,21 @@ angular.module('confusionApp')
 
 }])
 
-.factory('feedbackFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
+.factory('feedbackFactory', ['$resource', 'baseURL','ngDialog', function ($resource, baseURL, ngDialog) {
 
+    feedfac = {};
+    var feedback = '';
 
     return $resource(baseURL + "feedback/:id", null, {
-            'update': {
-                method: 'PUT'
-            }
-        });
+        'update': {
+            method: 'PUT'
+        }
+    }).save();
+ 
 
+    
+
+    return feedfac;
 }])
 
 .factory('$localStorage', ['$window', function ($window) {

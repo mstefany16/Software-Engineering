@@ -23,6 +23,14 @@ reservationRouter.route('/findTable')
 });
 
 reservationRouter.route('/reserve')
+.get(function (req, res, next){
+    Reservations.find(req.query)
+      .populate('postedBy')
+      .exec(function (err, reservation) {
+        if (err) next(err);
+        res.json(reservation);
+    });
+})
 .post(function (req, res, next){
   var userTime = req.body.time;
   var userDate = req.body.date;

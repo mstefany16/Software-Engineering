@@ -19,7 +19,7 @@ feedbackRouter.route('/')
     });
 })
 
-.post(function (req, res, next) {
+.post(Verify.verifyOrdinaryUser,function (req, res, next) {
     Feedback.create(req.body, function (err, feedback) {
         if (err) next(err);
         console.log('Feedback created!');
@@ -32,7 +32,7 @@ feedbackRouter.route('/')
     });
 })
 
-.delete(function (req, res, next) {
+.delete(Verify.verifyOrdinaryUser,function (req, res, next) {
     Feedback.remove({}, function (err, resp) {
         if (err) next(err);
         res.json(resp);

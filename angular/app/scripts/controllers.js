@@ -54,7 +54,8 @@
             };
         }])
 
-        .controller('ContactController', ['$scope','$state', 'feedbackFactory', function ($scope,$state, feedbackFactory) {
+        .controller('ContactController', ['$scope', '$state', 'feedbackFactory',
+            function ($scope, $state, feedbackFactory) {
 
             $scope.feedback = {};
             //$scope.showFeedback = false;
