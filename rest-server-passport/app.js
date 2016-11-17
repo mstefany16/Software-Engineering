@@ -26,6 +26,7 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 var favoriteRouter = require('./routes/favoriteRouter');
 var reservationRouter = require('./routes/reservationRouter');
+var feedbackRouter = require('./routes/feedbackRouter');
 
 
 var app = express();
@@ -63,6 +64,7 @@ app.use('/promotions',promoRouter);
 app.use('/leadership',leaderRouter);
 app.use('/favorites', favoriteRouter);
 app.use('/reservations', reservationRouter);
+app.use('/feedback', feedbackRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -54,46 +54,45 @@
             };
         }])
 
-        .controller('ContactController', ['$scope', 'feedbackFactory', function ($scope, feedbackFactory) {
+        .controller('ContactController', ['$scope','$state', 'feedbackFactory', function ($scope,$state, feedbackFactory) {
 
-            $scope.feedback = {
-                mychannel: "",
+            $scope.feedback = {};
+            //$scope.showFeedback = false;
+            $scope.message = "Loading ...";
+
+            feedbackFactory.query(
+                function (response) {
+                    $scope.feedback = response;
+                    //$scope.showMenu = true;
+
+                },
+                function (response) {
+                    $scope.message = "Error: " + response.status + " " + response.statusText;
+                });
+
+            $scope.myfeedback = {
                 firstName: "",
                 lastName: "",
-                agree: false,
-                email: ""
+                email: "",
+                tel:""
             };
 
-            var channels = [{
-                value: "tel",
-                label: "Tel."
-            }, {
-                value: "Email",
-                label: "Email"
-            }];
-
-            $scope.channels = channels;
-            $scope.invalidChannelSelection = false;
 
             $scope.sendFeedback = function () {
 
 
-                if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
-                    $scope.invalidChannelSelection = true;
-                } else {
-                    $scope.invalidChannelSelection = false;
-                    feedbackFactory.save($scope.feedback);
-                    $scope.feedback = {
-                        mychannel: "",
-                        firstName: "",
-                        lastName: "",
-                        agree: false,
-                        email: ""
-                    };
-                    $scope.feedback.mychannel = "";
-                    $scope.feedbackForm.$setPristine();
-                }
+                feedbackFactory.save($scope.myfeedback);
+                $state.go($state.current, {}, { reload: true });
+                $scope.myfeedback = {
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    tel: ""
+                };
+                $scope.myfeedback.mychannel = "";
+                $scope.feedbackForm.$setPristine();
             };
+
         }])
 
         .controller('DishDetailController', ['$scope', '$state', '$stateParams', 'menuFactory', 'commentFactory', function ($scope, $state, $stateParams, menuFactory, commentFactory) {
