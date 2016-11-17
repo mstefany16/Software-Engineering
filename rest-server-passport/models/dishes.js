@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 require('mongoose-currency').loadType(mongoose);
 
 var Schema = mongoose.Schema;
-var Currency = mongoose.Types.Currency
+var Currency = mongoose.Types.Currency;
 
 
 var commentSchema = new Schema({

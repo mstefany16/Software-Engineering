@@ -58,7 +58,7 @@ favoriteRouter.route('/')
 })
 
 .delete(function(req, res, next){
-    var userId = req.decoded._doc._id
+    var userId = req.decoded._doc._id;
 
     Favorites.remove({postedBy: userId}, function(err, resp){
       if (err) throw err;

@@ -2,33 +2,206 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb54966f-6074-4f86-bdc3-eecf6a631a87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/data/journal/WiredTigerLog.0000000002" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/images/logo.png" afterPath="$PROJECT_DIR$/angular/app/images/logo.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mongodb/data/journal/WiredTigerLog.0000000016" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/WiredTiger.wt" afterPath="$PROJECT_DIR$/mongodb/data/WiredTiger.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/mongodb/data/_mdb_catalog.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/collection-0-7677780359844741927.wt" afterPath="$PROJECT_DIR$/mongodb/data/collection-0-7677780359844741927.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/diagnostic.data/metrics.2016-11-11T21-09-43Z-00000" afterPath="$PROJECT_DIR$/mongodb/data/diagnostic.data/metrics.2016-11-11T21-09-43Z-00000" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/mongodb/data/diagnostic.data/metrics.interim" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/index-1-7677780359844741927.wt" afterPath="$PROJECT_DIR$/mongodb/data/index-1-7677780359844741927.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/sizeStorer.wt" afterPath="$PROJECT_DIR$/mongodb/data/sizeStorer.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/images/logo.png" afterPath="$PROJECT_DIR$/rest-server-passport/public/images/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/index.html" afterPath="$PROJECT_DIR$/angular/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/controllers.js" afterPath="$PROJECT_DIR$/angular/app/scripts/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/styles/mystyles.css" afterPath="$PROJECT_DIR$/angular/app/styles/mystyles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/contactus.html" afterPath="$PROJECT_DIR$/angular/app/views/contactus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/footer.html" afterPath="$PROJECT_DIR$/angular/app/views/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/header.html" afterPath="$PROJECT_DIR$/angular/app/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/home.html" afterPath="$PROJECT_DIR$/angular/app/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/menu.html" afterPath="$PROJECT_DIR$/angular/app/views/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/bower.json" afterPath="$PROJECT_DIR$/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/gulpfile.js" afterPath="$PROJECT_DIR$/angular/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/package.json" afterPath="$PROJECT_DIR$/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/scripts/services.js" afterPath="$PROJECT_DIR$/angular/app/scripts/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/app/views/reservation.html" afterPath="$PROJECT_DIR$/angular/app/views/reservation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular/test/karma.conf.js" afterPath="$PROJECT_DIR$/angular/test/karma.conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/WiredTiger.turtle" afterPath="$PROJECT_DIR$/mongodb/data/WiredTiger.turtle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/data/mongod.lock" afterPath="$PROJECT_DIR$/mongodb/data/mongod.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/brace-expansion/index.js" afterPath="$PROJECT_DIR$/node_modules/brace-expansion/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clone-stats/index.js" afterPath="$PROJECT_DIR$/node_modules/clone-stats/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clone-stats/test.js" afterPath="$PROJECT_DIR$/node_modules/clone-stats/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clone/clone.js" afterPath="$PROJECT_DIR$/node_modules/clone/clone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/clone/test.js" afterPath="$PROJECT_DIR$/node_modules/clone/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dateformat/bin/cli.js" afterPath="$PROJECT_DIR$/node_modules/dateformat/bin/cli.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dateformat/lib/dateformat.js" afterPath="$PROJECT_DIR$/node_modules/dateformat/lib/dateformat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/deprecated/index.js" afterPath="$PROJECT_DIR$/node_modules/deprecated/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/extglob/index.js" afterPath="$PROJECT_DIR$/node_modules/extglob/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/find-index/index.js" afterPath="$PROJECT_DIR$/node_modules/find-index/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/find-index/last.js" afterPath="$PROJECT_DIR$/node_modules/find-index/last.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/flagged-respawn/test/index.js" afterPath="$PROJECT_DIR$/node_modules/flagged-respawn/test/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/duplex.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/transform.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/readable-stream/writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/through2/through2.js" afterPath="$PROJECT_DIR$/node_modules/glob-stream/node_modules/through2/through2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/common.js" afterPath="$PROJECT_DIR$/node_modules/glob/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/glob.js" afterPath="$PROJECT_DIR$/node_modules/glob/glob.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/sync.js" afterPath="$PROJECT_DIR$/node_modules/glob/sync.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/global-prefix/index.js" afterPath="$PROJECT_DIR$/node_modules/global-prefix/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/examples/g.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/examples/g.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/examples/usr-local.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/examples/usr-local.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/glob.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/glob.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/00-setup.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/00-setup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/bash-comparison.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/bash-comparison.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/cwd-test.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/cwd-test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/mark.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/mark.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/nocase-nomagic.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/nocase-nomagic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/pause-resume.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/pause-resume.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/root-nomount.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/root-nomount.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/root.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/root.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/zz-cleanup.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/glob/test/zz-cleanup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/graceful-fs.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/graceful-fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/test/open.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/test/open.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/test/ulimit.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/graceful-fs/test/ulimit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/inherits/inherits.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/inherits/inherits.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/minimatch.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/minimatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/brace-expand.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/brace-expand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/caching.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/caching.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/defaults.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/defaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/extglob-ending-with-state-char.js" afterPath="$PROJECT_DIR$/node_modules/globule/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/graceful-fs/fs.js" afterPath="$PROJECT_DIR$/node_modules/graceful-fs/fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/graceful-fs/graceful-fs.js" afterPath="$PROJECT_DIR$/node_modules/graceful-fs/graceful-fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/graceful-fs/legacy-streams.js" afterPath="$PROJECT_DIR$/node_modules/graceful-fs/legacy-streams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/graceful-fs/polyfills.js" afterPath="$PROJECT_DIR$/node_modules/graceful-fs/polyfills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hosted-git-info/git-host-info.js" afterPath="$PROJECT_DIR$/node_modules/hosted-git-info/git-host-info.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hosted-git-info/git-host.js" afterPath="$PROJECT_DIR$/node_modules/hosted-git-info/git-host.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hosted-git-info/index.js" afterPath="$PROJECT_DIR$/node_modules/hosted-git-info/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/inflight/inflight.js" afterPath="$PROJECT_DIR$/node_modules/inflight/inflight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/inherits/inherits_browser.js" afterPath="$PROJECT_DIR$/node_modules/inherits/inherits_browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ini/ini.js" afterPath="$PROJECT_DIR$/node_modules/ini/ini.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/is-buffer/index.js" afterPath="$PROJECT_DIR$/node_modules/is-buffer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/is-buffer/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/is-buffer/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/is-utf8/is-utf8.js" afterPath="$PROJECT_DIR$/node_modules/is-utf8/is-utf8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/isexe/access.js" afterPath="$PROJECT_DIR$/node_modules/isexe/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/isexe/index.js" afterPath="$PROJECT_DIR$/node_modules/isexe/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/isexe/mode.js" afterPath="$PROJECT_DIR$/node_modules/isexe/mode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/isexe/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/isexe/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/isexe/windows.js" afterPath="$PROJECT_DIR$/node_modules/isexe/windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.compat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.compat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.js" afterPath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.underscore.js" afterPath="$PROJECT_DIR$/node_modules/lodash/dist/lodash.underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lru-cache/lib/lru-cache.js" afterPath="$PROJECT_DIR$/node_modules/lru-cache/lib/lru-cache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lru-cache/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/lru-cache/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lru-cache/test/foreach.js" afterPath="$PROJECT_DIR$/node_modules/lru-cache/test/foreach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lru-cache/test/memory-leak.js" afterPath="$PROJECT_DIR$/node_modules/lru-cache/test/memory-leak.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lru-cache/test/serialize.js" afterPath="$PROJECT_DIR$/node_modules/lru-cache/test/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/meow/node_modules/object-assign/index.js" afterPath="$PROJECT_DIR$/node_modules/meow/node_modules/object-assign/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/browser.js" afterPath="$PROJECT_DIR$/node_modules/minimatch/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/minimatch.js" afterPath="$PROJECT_DIR$/node_modules/minimatch/minimatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimist/index.js" afterPath="$PROJECT_DIR$/node_modules/minimist/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimist/test/default_bool.js" afterPath="$PROJECT_DIR$/node_modules/minimist/test/default_bool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimist/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/minimist/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimist/test/unknown.js" afterPath="$PROJECT_DIR$/node_modules/minimist/test/unknown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/bin/cmd.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/bin/cmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/examples/pow.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/examples/pow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/index.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/index.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/node_modules/minimist/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/test/chmod.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/test/chmod.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/test/clobber.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/test/clobber.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mkdirp/test/root.js" afterPath="$PROJECT_DIR$/node_modules/mkdirp/test/root.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/natives/index.js" afterPath="$PROJECT_DIR$/node_modules/natives/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/extract_description.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/extract_description.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/fixer.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/fixer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/make_warning.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/make_warning.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/normalize.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/normalize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/safe_format.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/lib/safe_format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/consistency.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/consistency.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/dependencies.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/dependencies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/github-urls.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/github-urls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/mixedcase-names.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/mixedcase-names.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/normalize.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/normalize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/scoped.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/scoped.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/scripts.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/strict.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/strict.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/normalize-package-data/test/typo.js" afterPath="$PROJECT_DIR$/node_modules/normalize-package-data/test/typo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/once/once.js" afterPath="$PROJECT_DIR$/node_modules/once/once.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/osenv/osenv.js" afterPath="$PROJECT_DIR$/node_modules/osenv/osenv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/osenv/test/unix.js" afterPath="$PROJECT_DIR$/node_modules/osenv/test/unix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/osenv/test/windows.js" afterPath="$PROJECT_DIR$/node_modules/osenv/test/windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/parse-glob/index.js" afterPath="$PROJECT_DIR$/node_modules/parse-glob/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/parse-json/vendor/parse.js" afterPath="$PROJECT_DIR$/node_modules/parse-json/vendor/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/parse-json/vendor/unicode.js" afterPath="$PROJECT_DIR$/node_modules/parse-json/vendor/unicode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/randomatic/index.js" afterPath="$PROJECT_DIR$/node_modules/randomatic/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/readable-stream/duplex.js" afterPath="$PROJECT_DIR$/node_modules/readable-stream/duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/node_modules/readable-stream/passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/readable-stream/transform.js" afterPath="$PROJECT_DIR$/node_modules/readable-stream/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/node_modules/readable-stream/writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rechoir/lib/normalize.js" afterPath="$PROJECT_DIR$/node_modules/rechoir/lib/normalize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/example/async.js" afterPath="$PROJECT_DIR$/node_modules/resolve/example/async.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/lib/async.js" afterPath="$PROJECT_DIR$/node_modules/resolve/lib/async.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/lib/node-modules-paths.js" afterPath="$PROJECT_DIR$/node_modules/resolve/lib/node-modules-paths.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/dotdot/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/dotdot/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/filter_sync.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/filter_sync.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/xmodules/aaa/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/xmodules/aaa/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/ymodules/aaa/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/ymodules/aaa/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/zmodules/bbb/main.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/module_dir/zmodules/bbb/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/node_path/x/aaa/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/node_path/x/aaa/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/node_path/x/ccc/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/node_path/x/ccc/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/node_path/y/bbb/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/node_path/y/bbb/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/node_path/y/ccc/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/node_path/y/ccc/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa/index.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa/main.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/precedence/aaa/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/precedence/bbb.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/precedence/bbb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver/without_basedir/main.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver/without_basedir/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver/without_basedir/node_modules/mymodule.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver/without_basedir/node_modules/mymodule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/resolve/test/resolver_sync.js" afterPath="$PROJECT_DIR$/node_modules/resolve/test/resolver_sync.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/semver/bin/semver" afterPath="$PROJECT_DIR$/node_modules/semver/bin/semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/semver/semver.browser.js" afterPath="$PROJECT_DIR$/node_modules/semver/semver.browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/semver/semver.js" afterPath="$PROJECT_DIR$/node_modules/semver/semver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/semver/test/big-numbers.js" afterPath="$PROJECT_DIR$/node_modules/semver/test/big-numbers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sigmund/bench.js" afterPath="$PROJECT_DIR$/node_modules/sigmund/bench.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sigmund/sigmund.js" afterPath="$PROJECT_DIR$/node_modules/sigmund/sigmund.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sigmund/test/basic.js" afterPath="$PROJECT_DIR$/node_modules/sigmund/test/basic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/signal-exit/index.js" afterPath="$PROJECT_DIR$/node_modules/signal-exit/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/signal-exit/signals.js" afterPath="$PROJECT_DIR$/node_modules/signal-exit/signals.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/spdx-expression-parse/index.js" afterPath="$PROJECT_DIR$/node_modules/spdx-expression-parse/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/spdx-expression-parse/parser.js" afterPath="$PROJECT_DIR$/node_modules/spdx-expression-parse/parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/stream-consume/test/tests.js" afterPath="$PROJECT_DIR$/node_modules/stream-consume/test/tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/string_decoder/index.js" afterPath="$PROJECT_DIR$/node_modules/string_decoder/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/duplex.js" afterPath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/transform.js" afterPath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/node_modules/through2/node_modules/readable-stream/writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/through2/through2.js" afterPath="$PROJECT_DIR$/node_modules/through2/through2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/validate-npm-package-license/index.js" afterPath="$PROJECT_DIR$/node_modules/validate-npm-package-license/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/lib/dest/writeContents/index.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/lib/dest/writeContents/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/clone/test.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/clone/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/fs.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/graceful-fs.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/graceful-fs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/polyfills.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/polyfills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/max-open.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/max-open.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/open.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/open.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/readdir-sort.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/readdir-sort.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/write-then-read.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/test/write-then-read.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/duplex.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/transform.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/readable-stream/writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/through2/through2.js" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/through2/through2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/which/bin/which" afterPath="$PROJECT_DIR$/node_modules/which/bin/which" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/which/which.js" afterPath="$PROJECT_DIR$/node_modules/which/which.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/wrappy/wrappy.js" afterPath="$PROJECT_DIR$/node_modules/wrappy/wrappy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/xtend/immutable.js" afterPath="$PROJECT_DIR$/node_modules/xtend/immutable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/xtend/mutable.js" afterPath="$PROJECT_DIR$/node_modules/xtend/mutable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/xtend/test.js" afterPath="$PROJECT_DIR$/node_modules/xtend/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/app.js" afterPath="$PROJECT_DIR$/rest-server-passport/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/config.js" afterPath="$PROJECT_DIR$/rest-server-passport/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/models/dishes.js" afterPath="$PROJECT_DIR$/rest-server-passport/models/dishes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/models/promotions.js" afterPath="$PROJECT_DIR$/rest-server-passport/models/promotions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/index.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/contactus.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/contactus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/footer.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/header.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/home.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/menu.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/public/views/reservation.html" afterPath="$PROJECT_DIR$/rest-server-passport/public/views/reservation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/dishRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/favoriteRouter.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/favoriteRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/leaderRouter.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/leaderRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-server-passport/routes/promoRouter.js" afterPath="$PROJECT_DIR$/rest-server-passport/routes/promoRouter.js" />
     </list>
     <ignored path="Software-Engineering.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,44 +223,86 @@
     <favorites_list name="Software-Engineering" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44206348">
+    <splitter split-orientation="horizontal" split-proportion="0.26638478">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/scripts/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="305">
+                  <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="69" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="38" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers.js">
+          <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/register.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/app/views/menu.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mystyles.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/app/styles/mystyles.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-999">
+                <state relative-caret-position="0">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="reservation.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/reservation.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+                  <folding>
+                    <element signature="n#style#0;n#p#0;n#form#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/header.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-15">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/home.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dishdetail.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/dishdetail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -97,11 +312,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="reservation.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/app/views/reservation.html">
+          <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -110,13 +325,23 @@
           <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular/app/scripts/services.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="191">
-                  <caret line="90" column="2" selection-start-line="90" selection-start-column="2" selection-end-line="90" selection-end-column="2" />
+                <state relative-caret-position="480">
+                  <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
                   <folding>
-                    <marker date="1478820374000" expanded="true" signature="3832:4221" ph="..." />
-                    <marker date="1478820374000" expanded="true" signature="4071:4221" ph="..." />
-                    <marker date="1478820374000" expanded="true" signature="5126:5319" ph="..." />
+                    <marker date="1479418182000" expanded="true" signature="5085:5474" ph="..." />
+                    <marker date="1479418182000" expanded="true" signature="5324:5474" ph="..." />
+                    <marker date="1479418182000" expanded="true" signature="6752:6945" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="80">
+                  <caret line="294" column="49" selection-start-line="294" selection-start-column="49" selection-end-line="294" selection-end-column="49" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -136,9 +361,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular/app/views/reservation.html" />
         <option value="$PROJECT_DIR$/angular/app/views/menu.html" />
+        <option value="$PROJECT_DIR$/angular/app/index.html" />
         <option value="$PROJECT_DIR$/angular/app/scripts/controllers.js" />
+        <option value="$PROJECT_DIR$/angular/app/views/reservation.html" />
+        <option value="$PROJECT_DIR$/angular/app/scripts/services.js" />
       </list>
     </option>
   </component>
@@ -253,50 +480,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Software-Engineering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Software-Engineering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Software-Engineering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Software-Engineering" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -309,6 +492,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -336,6 +522,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -370,24 +562,36 @@
       <option name="presentableId" value="Default" />
       <updated>1478837993620</updated>
       <workItem from="1478837994893" duration="1330000" />
-      <workItem from="1478881605539" duration="4646000" />
+      <workItem from="1478881605539" duration="8632000" />
+      <workItem from="1479252281976" duration="4551000" />
+      <workItem from="1479354335921" duration="8458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5976000" />
+    <option name="totallyTimeSpent" value="22971000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11205074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17798595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16496164" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24808185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -395,7 +599,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -411,14 +614,70 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <marker date="1479418182000" expanded="true" signature="5085:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="5324:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="6752:6945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4665">
+          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/reservation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/dishdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -431,23 +690,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/styles/mystyles.css">
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-999">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="4320">
+          <caret line="288" column="50" selection-start-line="288" selection-start-column="50" selection-end-line="288" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/views/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="285">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/app/views/reservation.html">
+    <entry file="file://$PROJECT_DIR$/angular/app/styles/mystyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -455,22 +713,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1479418182000" expanded="true" signature="5085:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="5324:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="6752:6945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/styles/mystyles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/dishdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="319" column="0" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+        <state relative-caret-position="80">
+          <caret line="294" column="49" selection-start-line="294" selection-start-column="49" selection-end-line="294" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/app/views/reservation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#form#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/app/scripts/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="90" column="2" selection-start-line="90" selection-start-column="2" selection-end-line="90" selection-end-column="2" />
+        <state relative-caret-position="480">
+          <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
           <folding>
-            <marker date="1478820374000" expanded="true" signature="3832:4221" ph="..." />
-            <marker date="1478820374000" expanded="true" signature="4071:4221" ph="..." />
-            <marker date="1478820374000" expanded="true" signature="5126:5319" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="5085:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="5324:5474" ph="..." />
+            <marker date="1479418182000" expanded="true" signature="6752:6945" ph="..." />
           </folding>
         </state>
       </provider>

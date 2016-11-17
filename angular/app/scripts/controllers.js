@@ -242,8 +242,10 @@
             };
         }])
 
+        // handles logging in and logging out and registration
         .controller('HeaderController', ['$scope', '$state', '$rootScope', 'ngDialog', 'AuthFactory', function ($scope, $state, $rootScope, ngDialog, AuthFactory) {
 
+            //used to flip log in and log out on navbar
             $scope.loggedIn = false;
             $scope.username = '';
 
@@ -252,8 +254,11 @@
                 $scope.username = AuthFactory.getUsername();
             }
 
+            //open the login view
             $scope.openLogin = function () {
-                ngDialog.open({ template: 'views/login.html', scope: $scope, className: 'ngdialog-theme-default', controller:"LoginController" });
+                ngDialog.open({ template: 'views/login.html',
+                    scope: $scope, className: 'ngdialog-theme-default',
+                    controller:"LoginController" });
             };
 
             $scope.logOut = function() {
@@ -272,6 +277,7 @@
                 $scope.username = AuthFactory.getUsername();
             });
 
+            //active class
             $scope.stateis = function(curstate) {
                 return $state.is(curstate);
             };
@@ -280,11 +286,14 @@
 
         .controller('LoginController', ['$scope', 'ngDialog', '$localStorage', 'AuthFactory', function ($scope, ngDialog, $localStorage, AuthFactory) {
 
+            //retrieves login data in local storage
             $scope.loginData = $localStorage.getObject('userinfo','{}');
 
+            // if in login and is remembered me get the info from local storage
             $scope.doLogin = function() {
                 if($scope.rememberMe)
                     $localStorage.storeObject('userinfo',$scope.loginData);
+
 
                 AuthFactory.login($scope.loginData);
 
@@ -311,13 +320,7 @@
                 ngDialog.close();
 
             };
-        }])
-
-        // finish controller for reservation form
-        .controller('ReservationController', ['$scope', 'ngDialog' ,
-            function ($scope, ngDialog) {
-
-
-
         }]);
+
+
 } )();

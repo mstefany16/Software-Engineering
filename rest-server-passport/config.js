@@ -6,4 +6,4 @@ module.exports = {
         clientSecret: '9c91b580dee7cfe6a938d15ab53aaf98',
         callbackURL: 'https://localhost:3443/users/facebook/callback'
     }
-}
+};
