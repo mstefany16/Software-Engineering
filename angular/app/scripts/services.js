@@ -64,6 +64,11 @@
           'update': {
               method: 'PUT'
           }
+      },
+            {
+          'post':{
+              method: 'POST'
+         }
       });
 
   }])
@@ -73,6 +78,7 @@
   .factory('$localStorage', ['$window', function ($window) {
       return {
           store: function (key, value) {
+
               $window.localStorage[key] = value;
           },
           get: function (key, defaultValue) {
@@ -91,7 +97,8 @@
   }])
 
   //    login, logout, registration
-  .factory('AuthFactory', ['$resource', '$http', '$localStorage', '$rootScope', '$window', 'baseURL', 'ngDialog', function ($resource, $http, $localStorage, $rootScope, $window, baseURL, ngDialog) {
+  .factory('AuthFactory', ['$resource', '$http', '$localStorage', '$rootScope', '$window', 'baseURL', 'ngDialog','$state',
+      function ($resource, $http, $localStorage, $rootScope, $window, baseURL, ngDialog,$state) {
 
 
       var authFac = {};
@@ -103,6 +110,7 @@
       var TOKEN_KEY = 'Token';
       var isAuthenticated = false;
       var username = '';
+      var admin = false;
       var authToken = undefined;
 
       //retrieves credentials from the local storage and restores those value
@@ -124,6 +132,7 @@
       function useCredentials(credentials) {
           isAuthenticated = true;
           username = credentials.username;
+          admin = credentials.admin;
           authToken = credentials.token;
 
           // Set the token as header for your requests!
@@ -137,6 +146,7 @@
       function destroyUserCredentials() {
           authToken = undefined;
           username = '';
+          admin = false;
           isAuthenticated = false;
           $http.defaults.headers.common['x-access-token'] = authToken;
           //  remove stored credentials in local storage
@@ -151,9 +161,10 @@
              // success function
              function (response) {
                  // takes in the username and token and puts it in local storage
-                 storeUserCredentials({ username: loginData.username, token: response.token });
+                 storeUserCredentials({ username: loginData.username, admin: response.admin, token: response.token });
                  //remind the controller that the login is successful
                  // display user name on navbar
+                 $state.go('app', {}, { reload: true });
                  $rootScope.$broadcast('login:Successful');
              },
              // failure function
@@ -201,6 +212,7 @@
                  }
                  //broadcast
                  $rootScope.$broadcast('registration:Successful');
+                 $state.go('app', {}, { reload: true });
              },
 
              // error function
@@ -219,11 +231,6 @@
           );
       };
 
-      authFac.reservation = function (reservationData) {
-
-      };
-
-
       //reserve table function
 
       authFac.isAuthenticated = function () {
@@ -234,12 +241,30 @@
           return username;
       };
 
+      authFac.getAdmin = function () {
+          return admin;
+      };
+
       loadUserCredentials();
 
       return authFac;
 
   }])
-
+.factory('responseObserver', function responseObserver($q, $window) {
+    return {
+        'responseError': function (errorResponse) {
+            switch (errorResponse.status) {
+                case 403:
+                    $window.location = '/#/users/login';
+                    break;
+                case 500:
+                    $window.location = './500.html';
+                    break;
+            }
+            return $q.reject(errorResponse);
+        }
+    };
+});
 
 
 })();

@@ -32,9 +32,9 @@
                     type="button">
                 Add Item
             </button>
-            <button class="btn btn-xs btn-primary pull-right"
+            <button  ng-if = "admin" ng-click="toggleDelete()" class="btn btn-xs btn-primary pull-right"
                     type="button">
-                Remove Item
+                {{showDelete ? 'Hide Delete Button':'Show Delete Button'}}
             </button>
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation"
@@ -76,6 +76,10 @@
                             <button  ng-show="showFavorites" ng-click="addToFavorites(dish._id)" class="btn btn-xs btn-default pull-right"
                                      type="button">
                                 <i class="fa fa-heart"></i>
+                            </button>
+                            <button ng-if = "admin" ng-show="showDelete" ng-click="removeDish(dish._id)" class="btn btn-xs btn-default pull-right"
+                                    type="button">
+                                <i class="fa fa-remove"></i>
                             </button>
                         </div>
                     </li>

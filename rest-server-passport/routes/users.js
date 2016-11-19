@@ -55,13 +55,14 @@ router.post('/login', function(req, res, next) {
           err: 'Could not log in user'
         });
       }
-
+      var admin = user.admin;
       var token = Verify.getToken({"username":user.username, "_id":user._id,
       "admin":user.admin});
       res.status(200).json({
         status: 'Login successful!',
         success: true,
-        token: token
+        token: token,
+        admin : admin
       });
     });
   })(req,res,next);

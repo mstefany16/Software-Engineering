@@ -3,20 +3,22 @@
 
     angular.module('confusionApp')
 
-        .controller('MenuController', ['$scope', 'menuFactory', 'favoriteFactory', function ($scope, menuFactory, favoriteFactory) {
-
+        .controller('MenuController', ['$scope','$state', 'menuFactory', 'favoriteFactory', 'AuthFactory',
+            function ($scope, $state, menuFactory, favoriteFactory, AuthFactory) {
+            
             $scope.tab = 1;
             $scope.filtText = '';
             $scope.showDetails = false;
             $scope.showFavorites = false;
+            $scope.showDelete = false;
             $scope.showMenu = false;
             $scope.message = "Loading ...";
+            $scope.admin = AuthFactory.getAdmin();
 
             menuFactory.query(
                 function (response) {
                     $scope.dishes = response;
                     $scope.showMenu = true;
-
                 },
                 function (response) {
                     $scope.message = "Error: " + response.status + " " + response.statusText;
@@ -47,15 +49,36 @@
             $scope.toggleFavorites = function () {
                 $scope.showFavorites = !$scope.showFavorites;
             };
+            $scope.toggleDelete = function () {
+                $scope.showDelete = !$scope.showDelete;
+            };
 
             $scope.addToFavorites = function(dishid) {
                 console.log('Add to favorites', dishid);
                 favoriteFactory.save({_id: dishid});
                 $scope.showFavorites = !$scope.showFavorites;
             };
+            
+
+            $scope.removeDish = function (dishid) {
+                    console.log('Remove dish', dishid);
+                    menuFactory.delete({ id: dishid });
+                    $scope.showDelete = !$scope.showDelete;
+                    $state.go('app.menu', {}, { reload: true });
+                
+            };
         }])
 
-        .controller('ContactController', ['$scope', '$state', 'feedbackFactory', function ($scope, $state, feedbackFactory) {
+        .controller('ContactController', ['$scope', '$state', 'feedbackFactory','ngDialog',
+            function ($scope, $state, feedbackFactory, ngDialog) {
+
+            $scope.openLogin = function () {
+                ngDialog.open({
+                    template: 'views/login.html',
+                    scope: $scope, className: 'ngdialog-theme-default',
+                    controller: "LoginController"
+                });
+            };
 
             $scope.feedback = {};
             //$scope.showFeedback = false;
@@ -257,13 +280,15 @@
             $scope.openLogin = function () {
                 ngDialog.open({ template: 'views/login.html',
                     scope: $scope, className: 'ngdialog-theme-default',
-                    controller:"LoginController" });
+                    controller: "LoginController"
+                });
             };
 
             $scope.logOut = function() {
                 AuthFactory.logout();
                 $scope.loggedIn = false;
                 $scope.username = '';
+                $state.go('app', {}, { reload: true });
             };
 
             $rootScope.$on('login:Successful', function () {
@@ -297,7 +322,7 @@
                 AuthFactory.login($scope.loginData);
 
                 ngDialog.close();
-
+               
             };
 
             $scope.openRegister = function () {

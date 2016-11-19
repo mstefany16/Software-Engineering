@@ -16,22 +16,21 @@
                         <input type="radio" name="section" id="inside" autocomplete="off"
                                ng-model="reservationData.inside" checked> Inside
                     </label>
-                    <label class="btn btn-danger" for="outside">
-                        <input type="radio" name="section" id="outside" autocomplete="off"
+                    <label class="btn btn-danger" for="!inside">
+                        <input type="radio" name="section" id="!inside" autocomplete="off"
                                ng-model="reservationData.outside"> Outside
                     </label>
-
                 </div>
             </div>
             <div class="form-group">
-                <label class="sr-only" for="date">Date </label>
-                <input type="text" class="form-control input-sm" id="date" placeholder="Date here"
+                <label class="sr-only" for="reservationDate">Date </label>
+                <input type="text" class="form-control input-sm" id="reservationDate" placeholder="Date here"
                        ng-model="reservationData.date">
             </div>
             <p style="padding:5px;"></p>
             <div class="form-group">
-                <label for="time" class="col-sm-2 control-label">Time</label>
-                <div id="time" class="col-xs-10">
+                <label for="reservationTime" class="col-sm-2 control-label">Time</label>
+                <div id="reservationTime" class="col-xs-10">
                     <label class="radio-inline">
                         <input name="n" type="radio" id="time5" value="5"
                                ng-model="reservationData.5">5
@@ -64,6 +63,5 @@
         </form>
     </div>
     <div>
-
     </div>
 </div>

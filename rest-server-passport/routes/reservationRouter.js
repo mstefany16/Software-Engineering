@@ -9,7 +9,7 @@ var Verify = require('./verify');
 var reservationRouter = express.Router();
 reservationRouter.use(bodyParser.json());
 
-reservationRouter.route('/findTable')
+reservationRouter.route('/reserve')
 .post(function(req,res,next){
   var userTime = req.body.time;
   var userDate = req.body.date;
