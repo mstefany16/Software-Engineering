@@ -33,9 +33,11 @@ reservationRouter.route('/reserve')
 })
 .post(function (req, res, next){
   var userTime = req.body.time;
+  console.log(userTime);
   var userDate = req.body.date;
+  console.log(userDate);
   var userSection = req.body.section;
-
+  console.log(userSection);
   Reservations.findOneAndUpdate({"time": userTime, "section": userSection, "date": userDate, "reserved": false},
       { $set:{reserved: true}},
       {returnNewDocument: true},

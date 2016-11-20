@@ -18,6 +18,10 @@ var User = new Schema({
     admin:   {
         type: Boolean,
         default: false
+    },
+    postedBy:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
     }
 });
 

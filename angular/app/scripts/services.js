@@ -68,6 +68,16 @@
 
   }])
 
+.factory('reservationFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
+
+    return $resource(baseURL + "reservations/reserve/:id", null, {
+        'update': {
+            method: 'PUT'
+        }
+    });
+
+}])
+
   //    local storage to store user name and password and auth uses it to store the
   //    token sent back from the server side
   .factory('$localStorage', ['$window', function ($window) {
@@ -92,174 +102,165 @@
   }])
 
   //    login, logout, registration
-  .factory('AuthFactory', ['$resource', '$http', '$localStorage', '$rootScope', '$window', 'baseURL', 'ngDialog','$state',
-      function ($resource, $http, $localStorage, $rootScope, $window, baseURL, ngDialog,$state) {
+  .factory('AuthFactory', ['$resource', '$http', '$localStorage', '$rootScope', '$window', 'baseURL', 'ngDialog', '$state',
+      function ($resource, $http, $localStorage, $rootScope, $window, baseURL, ngDialog, $state) {
 
 
-      var authFac = {};
+          var authFac = {};
 
-      //when logged in, server the send with back an object which has a token
-      //the save it use it localstorage and for subsequent requests put the token in
-      //the header of the http request going client -> server
-      //when token is deleted, logged out
-      var TOKEN_KEY = 'Token';
-      var isAuthenticated = false;
-      var username = '';
-      var admin = false;
-      var authToken = undefined;
+          //when logged in, server the send with back an object which has a token
+          //the save it use it localstorage and for subsequent requests put the token in
+          //the header of the http request going client -> server
+          //when token is deleted, logged out
+          var TOKEN_KEY = 'Token';
+          var isAuthenticated = false;
+          var username = '';
+          var admin = false;
+          var authToken = undefined;
 
-      //retrieves credentials from the local storage and restores those value
-      //  doesnt handle expired tokens future TODO
-      function loadUserCredentials() {
-          var credentials = $localStorage.getObject(TOKEN_KEY, '{}');
-          if (credentials.username !== undefined) {
+          //retrieves credentials from the local storage and restores those value
+          //  doesnt handle expired tokens future TODO
+          function loadUserCredentials() {
+              var credentials = $localStorage.getObject(TOKEN_KEY, '{}');
+              if (credentials.username !== undefined) {
+                  useCredentials(credentials);
+              }
+          }
+
+          //using local storage and stores credentials username + token
+          function storeUserCredentials(credentials) {
+              $localStorage.storeObject(TOKEN_KEY, credentials);
               useCredentials(credentials);
           }
-      }
 
-      //using local storage and stores credentials username + token
-      function storeUserCredentials(credentials) {
-          $localStorage.storeObject(TOKEN_KEY, credentials);
-          useCredentials(credentials);
-      }
+          //use the tokens once logged in
+          function useCredentials(credentials) {
+              isAuthenticated = true;
+              username = credentials.username;
+              admin = credentials.admin;
+              authToken = credentials.token;
 
-      //use the tokens once logged in
-      function useCredentials(credentials) {
-          isAuthenticated = true;
-          username = credentials.username;
-          admin = credentials.admin;
-          authToken = credentials.token;
+              // Set the token as header for your requests!
+              //  x-access-token - name of header
+              //  by calling this , for all outgoing message, insert header x-access-token
+              //  and put authToken
+              $http.defaults.headers.common['x-access-token'] = authToken;
+          }
 
-          // Set the token as header for your requests!
-          //  x-access-token - name of header
-          //  by calling this , for all outgoing message, insert header x-access-token
-          //  and put authToken
-          $http.defaults.headers.common['x-access-token'] = authToken;
-      }
+          // authtoken is undefined, user is empty, auth is false, header value is removed
+          function destroyUserCredentials() {
+              authToken = undefined;
+              username = '';
+              admin = false;
+              isAuthenticated = false;
+              $http.defaults.headers.common['x-access-token'] = authToken;
+              //  remove stored credentials in local storage
+              $localStorage.remove(TOKEN_KEY);
+          }
 
-      // authtoken is undefined, user is empty, auth is false, header value is removed
-      function destroyUserCredentials() {
-          authToken = undefined;
-          username = '';
-          admin = false;
-          isAuthenticated = false;
-          $http.defaults.headers.common['x-access-token'] = authToken;
-          //  remove stored credentials in local storage
-          $localStorage.remove(TOKEN_KEY);
-      }
+          //logindata passed
+          authFac.login = function (loginData) {
+              //rest api endpoint
+              $resource(baseURL + "users/login")
+              .save(loginData,
+                 // success function
+                 function (response) {
+                     // takes in the username and token and puts it in local storage
+                     storeUserCredentials({ username: loginData.username, admin: response.admin, token: response.token });
+                     //remind the controller that the login is successful
+                     // display user name on navbar
+                     $state.go($state.current, {}, { reload: true });
+                     $rootScope.$broadcast('login:Successful');
+                 },
+                 // failure function
+                 function (response) {
+                     isAuthenticated = false;
 
-      //logindata passed
-      authFac.login = function (loginData) {
-          //rest api endpoint
-          $resource(baseURL + "users/login")
-          .save(loginData,
-             // success function
-             function (response) {
-                 // takes in the username and token and puts it in local storage
-                 storeUserCredentials({ username: loginData.username, admin: response.admin, token: response.token });
-                 //remind the controller that the login is successful
-                 // display user name on navbar
-                 $state.go($state.current, {}, { reload: true });
-                 $rootScope.$broadcast('login:Successful');
-             },
-             // failure function
-             function (response) {
-                 isAuthenticated = false;
-
-                 // error message
-                 var message = '\
+                     // error message
+                     var message = '\
                 <div class="ngdialog-message">\
                 <div><h3>Login Unsuccessful</h3></div>' +
-                     '<div><p>' + response.data.err.message + '</p><p>' +
-                       response.data.err.name + '</p></div>' +
-                   '<div class="ngdialog-buttons">\
+                         '<div><p>' + response.data.err.message + '</p><p>' +
+                           response.data.err.name + '</p></div>' +
+                       '<div class="ngdialog-buttons">\
                     <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click=confirm("OK")>OK</button>\
                 </div>';
 
-                 ngDialog.openConfirm({ template: message, plain: 'true' });
-             }
-
-          );
-
-      };
-
-      //user logout
-      authFac.logout = function () {
-          //get sends a get request to the users logout on server side  and destroy the credentials
-          $resource(baseURL + "users/logout").get(function (response) {
-          });
-          destroyUserCredentials();
-      };
-
-      //passes register data from controller
-      authFac.register = function (registerData) {
-
-          $resource(baseURL + "users/register")
-          .save(registerData,
-             // success function
-             function (response) {
-                 // login the user with the function
-                 authFac.login({ username: registerData.username, password: registerData.password });
-                 //remember the users credentials id registration successful
-                 if (registerData.rememberMe) {
-                     $localStorage.storeObject('userinfo',
-                         { username: registerData.username, password: registerData.password });
+                     ngDialog.openConfirm({ template: message, plain: 'true' });
                  }
-                 //broadcast
-                 $rootScope.$broadcast('registration:Successful');
-                 $state.go('app', {}, { reload: true });
-             },
 
-             // error function
-             function (response) {
+              );
 
-                 var message = '\
+          };
+
+          //user logout
+          authFac.logout = function () {
+              //get sends a get request to the users logout on server side  and destroy the credentials
+              $resource(baseURL + "users/logout").get(function (response) {
+              });
+              destroyUserCredentials();
+          };
+
+          //passes register data from controller
+          authFac.register = function (registerData) {
+
+              $resource(baseURL + "users/register")
+              .save(registerData,
+                 // success function
+                 function (response) {
+                     // login the user with the function
+                     authFac.login({ username: registerData.username, password: registerData.password });
+                     //remember the users credentials id registration successful
+                     if (registerData.rememberMe) {
+                         $localStorage.storeObject('userinfo',
+                             { username: registerData.username, password: registerData.password });
+                     }
+                     //broadcast
+                     $rootScope.$broadcast('registration:Successful');
+                     $state.go('app', {}, { reload: true });
+                 },
+
+                 // error function
+                 function (response) {
+
+                     var message = '\
                 <div class="ngdialog-message">\
                 <div><h3>Registration Unsuccessful</h3></div>' +
-                     '<div><p>' + response.data.err.message +
-                     '</p><p>' + response.data.err.name + '</p></div>';
+                         '<div><p>' + response.data.err.message +
+                         '</p><p>' + response.data.err.name + '</p></div>';
 
-                 ngDialog.openConfirm({ template: message, plain: 'true' });
+                     ngDialog.openConfirm({ template: message, plain: 'true' });
 
-             }
+                 }
 
-          );
-      };
+              );
+          };
 
-      //reserve table function
+          //deletes user account 
+          authFac.delete = function () {
+              $resource(baseURL + "users/account").delete(function (response) {
+              });
+              $state.go('app', {}, { reload: true });
+          };
 
-      authFac.isAuthenticated = function () {
-          return isAuthenticated;
-      };
+          authFac.isAuthenticated = function () {
+              return isAuthenticated;
+          };
 
-      authFac.getUsername = function () {
-          return username;
-      };
+          authFac.getUsername = function () {
+              return username;
+          };
 
-      authFac.getAdmin = function () {
-          return admin;
-      };
+          authFac.getAdmin = function () {
+              return admin;
+          };
 
-      loadUserCredentials();
+          loadUserCredentials();
 
-      return authFac;
+          return authFac;
 
-  }])
-.factory('responseObserver', function responseObserver($q, $window) {
-    return {
-        'responseError': function (errorResponse) {
-            switch (errorResponse.status) {
-                case 403:
-                    $window.location = '/#/users/login';
-                    break;
-                case 500:
-                    $window.location = './500.html';
-                    break;
-            }
-            return $q.reject(errorResponse);
-        }
-    };
-});
+      }])
+    ;
 
 
 })();

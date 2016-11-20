@@ -1,67 +1,71 @@
-﻿<div class="ngdialog-message">
+﻿﻿<div class="ngdialog-message">
     <div class="">
-        <h3>Reserve Table </h3>
+        <h4>Reserve Table</h4>
     </div>
     <div class="">&nbsp;</div>
     <div class="">
-        <form ng-submit="doReservation()">
+        <form role="form" name="sendForm" ng-submit="sendReservation()" novalidate>
             <div class="form-group">
-                <label class="sr-only" for="numberOfGuests">Number of Guest(s)</label>
-                <input type="text" class="form-control input-sm" id="numberOfGuests" placeholder="Guest(s) here"
-                       ng-model="reservationData.numberOfGuests">
+                <label for="guests">Number Of Guest(s) (select one)</label>
+                <select class="form-control" id="guests">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' :
+            sendForm.date.$error.required && !sendForm.date.$pristine }">
+                <label for="date">Date</label>
+                <div>
+                    <input type="text" class="form-control" id="date" name="date" placeholder="MM/DD/YYYY"
+                           ng-model="myreservation.date" required>
+                    <span ng-show="sendForm.date.$error.required && !sendForm.date.$pristine" class="help-block">The date of the reservation is required.</span>
+                </div>
             </div>
             <div class="form-group">
-                <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-success active" for="inside">
-                        <input type="radio" name="section" id="inside" autocomplete="off"
-                               ng-model="reservationData.inside" checked> Inside
+                <label for="time">Time (PM)</label>
+                <div id="time">
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="5" value="5" checked>5
                     </label>
-                    <label class="btn btn-danger" for="!inside">
-                        <input type="radio" name="section" id="!inside" autocomplete="off"
-                               ng-model="reservationData.outside"> Outside
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="6" value="6">6
+                    </label>
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="7" value="7">7
+                    </label>
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="8" value="8">8
+                    </label>
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="9" value="9">9
+                    </label>
+                    <label class="radio-inline">
+                        <input name="n" type="radio" id="10" value="10">10
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <label class="sr-only" for="reservationDate">Date </label>
-                <input type="text" class="form-control input-sm" id="reservationDate" placeholder="Date here"
-                       ng-model="reservationData.date">
-            </div>
-            <p style="padding:5px;"></p>
-            <div class="form-group">
-                <label for="reservationTime" class="col-sm-2 control-label">Time</label>
-                <div id="reservationTime" class="col-xs-10">
+                <!--Inside = TRUE
+                    Outside = FALSE-->
+                <label for="section">Section </label>
+                <div id="section">
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="time5" value="5"
-                               ng-model="reservationData.5">5
+                        <input name="section" type="radio" id="inside" value="inside" checked>Inside
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="time6" value="6"
-                               ng-model="reservationData.6">6
-                    </label>
-                    <label class="radio-inline">
-                        <input name="n" type="radio" id="time7" value="7"
-                               ng-model="reservationData.7">7
-                    </label>
-                    <label class="radio-inline">
-                        <input name="n" type="radio" id="time8" value="8"
-                               ng-model="reservationData.8">8
-                    </label>
-                    <label class="radio-inline">
-                        <input name="n" type="radio" id="time9" value="9"
-                               ng-model="reservationData.9">9
-                    </label>
-                    <label class="radio-inline">
-                        <input name="n" type="radio" id="time10" value="10"
-                               ng-model="reservationData.10">10
+                        <input name="section" type="radio" id="outside" value="outside">Outside
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-info btn-sm">Reserve Table!</button>
-            <button type="button" class="btn btn-default btn-sm" ng-click=closeThisDialog("Cancel")>Cancel</button> &nbsp; &nbsp;
-
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-info btn-sm" ng-disabled="sendForm.$invalid">Reserve Table! </button>
+                    <button type="button" class="btn btn-default btn-sm" ng-click=closeThisDialog("Cancel")>Cancel</button> &nbsp; &nbsp;
+                </div>
+            </div>
         </form>
-    </div>
-    <div>
     </div>
 </div>

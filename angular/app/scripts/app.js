@@ -91,7 +91,5 @@
 
       $urlRouterProvider.otherwise('/');
   })
-      .config(function ($httpProvider) {
-          $httpProvider.interceptors.push('responseObserver');
-      });
+    ;
 } )();
