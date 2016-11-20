@@ -69,25 +69,16 @@
             };
         }])
 
-        .controller('ContactController', ['$scope', '$state', 'feedbackFactory','ngDialog',
-            function ($scope, $state, feedbackFactory, ngDialog) {
-
-            $scope.openLogin = function () {
-                ngDialog.open({
-                    template: 'views/login.html',
-                    scope: $scope, className: 'ngdialog-theme-default',
-                    controller: "LoginController"
-                });
-            };
-
+        .controller('ContactController', ['$scope', '$state', 'feedbackFactory','AuthFactory','ngDialog',
+            function ($scope, $state, feedbackFactory,AuthFactory,  ngDialog) {
+            
             $scope.feedback = {};
-            //$scope.showFeedback = false;
+            $scope.user = AuthFactory.isAuthenticated();
             $scope.message = "Loading ...";
 
             feedbackFactory.query(
                 function (response) {
                     $scope.feedback = response;
-                    //$scope.showMenu = true;
 
                 },
                 function (response) {
@@ -97,8 +88,11 @@
             $scope.myfeedback = {
                 firstName: "",
                 lastName: "",
+                tel: "",
                 email: "",
-                tel: ""
+                rating: 5,
+                comments: ""
+                
             };
 
 
@@ -106,15 +100,19 @@
 
 
                 feedbackFactory.save($scope.myfeedback);
+
                 $state.go($state.current, {}, { reload: true });
+
+                $scope.feedbackForm.$setPristine();
                 $scope.myfeedback = {
                     firstName: "",
                     lastName: "",
+                    tel: "",
                     email: "",
-                    tel: ""
+                    rating: 5,
+                    comments: ""
                 };
-                $scope.myfeedback.mychannel = "";
-                $scope.feedbackForm.$setPristine();
+                
             };
 
         }])

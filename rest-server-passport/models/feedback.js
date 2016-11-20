@@ -12,12 +12,18 @@ var feedbackSchema = new Schema({
         type: String,
         required: true
     },
+    tel:{
+      type: Number,
+    },
     email:{
       type: String,
       required: true
     },
-      tel:{
-      type: Number,
+    rating:  {
+        type: Number,
+        min: 1,
+        max: 5,
+        required: true
     },
     comments:{
       type: String,
