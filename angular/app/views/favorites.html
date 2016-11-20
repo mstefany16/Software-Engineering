@@ -17,10 +17,6 @@
                 <h3>{{message}}</h3>
             </div>
             <div class="col-xs-12" ng-if="showMenu">
-                 <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
-                    type="button">
-                    {{showDetails ? 'Hide Details':'Show Details'}}
-                </button>
                  <button ng-click="toggleDelete()" class="btn btn-xs btn-primary pull-right"
                     type="button">
                     {{showDelete ? 'Hide Delete Button':'Show Delete Button'}}
@@ -61,7 +57,7 @@
                         <h2 class="media-heading">{{dish.name}}
                         <span class="label label-danger label-xs">{{dish.label}}</span>
                         <span class="badge">{{dish.price/100 | currency}}</span></h2>
-                        <p ng-show="showDetails">{{dish.description}}</p>
+                        <span class="media-body">{{dish.description}}</span>
                          <button  ng-show="showDelete" ng-click="deleteFavorite(dish._id)" class="btn btn-xs btn-danger pull-right"
                     type="button">
                           <i class="fa fa-remove"></i>

@@ -3,8 +3,8 @@
 
     angular.module('confusionApp')
 
-        .controller('MenuController', ['$scope','$state', 'menuFactory', 'favoriteFactory', 'AuthFactory',
-            function ($scope, $state, menuFactory, favoriteFactory, AuthFactory) {
+        .controller('MenuController', ['$scope','$state', 'menuFactory', 'favoriteFactory', 'AuthFactory','ngDialog',
+            function ($scope, $state, menuFactory, favoriteFactory, AuthFactory, ngDialog) {
             
             $scope.tab = 1;
             $scope.filtText = '';
@@ -12,8 +12,10 @@
             $scope.showFavorites = false;
             $scope.showDelete = false;
             $scope.showMenu = false;
+            $scope.showAdd = false;
             $scope.message = "Loading ...";
             $scope.admin = AuthFactory.getAdmin();
+            $scope.user = AuthFactory.isAuthenticated();
 
             menuFactory.query(
                 function (response) {
@@ -59,18 +61,68 @@
                 $scope.showFavorites = !$scope.showFavorites;
             };
             
-
-            $scope.removeDish = function (dishid) {
-                    console.log('Remove dish', dishid);
-                    menuFactory.delete({ id: dishid });
-                    $scope.showDelete = !$scope.showDelete;
-                    $state.go('app.menu', {}, { reload: true });
-                
+            $scope.openAdd = function () {
+                ngDialog.open({
+                    template: 'views/adddish.html',
+                    scope: $scope, className: 'ngdialog-theme-default',
+                    controller: "AddController"
+                });
             };
-        }])
+            $scope.removeDish = function (dishid) {
+                console.log('Remove dish', dishid);
+                menuFactory.delete({ id: dishid });
+                $scope.showDelete = !$scope.showDelete;
+                $state.go('app.menu', {}, { reload: true });
 
-        .controller('ContactController', ['$scope', '$state', 'feedbackFactory','AuthFactory','ngDialog',
-            function ($scope, $state, feedbackFactory,AuthFactory,  ngDialog) {
+            };
+
+            }])
+
+    .controller('AddController', ['$scope','$state', 'menuFactory', 'AuthFactory','ngDialog',
+            function ($scope, $state, menuFactory, AuthFactory, ngDialog) {
+
+
+
+                $scope.admin = AuthFactory.getAdmin();
+                $scope.message = "Loading ...";
+
+                $scope.myDish = {
+                    name: "",
+                    image: "",
+                    category: "",
+                    label: "",
+                    price: "",
+                    description: "",
+                    featured: false
+
+                };
+
+                $scope.addDish = function () {
+                    console.log('Add dish');
+                    menuFactory.save($scope.myDish);
+
+                    ngDialog.close();
+                    $state.go('app.menu', {}, { reload: true });
+
+                    $scope.addForm.$setPristine();
+
+                    $scope.myDish = {
+                        name: "",
+                        image: "",
+                        category: "",
+                        label: "",
+                        price: "",
+                        description: "",
+                        featured: false
+
+                    };
+                };
+
+ 
+            }])
+
+        .controller('ContactController', ['$scope', '$state', 'feedbackFactory','AuthFactory',
+            function ($scope, $state, feedbackFactory,AuthFactory) {
             
             $scope.feedback = {};
             $scope.user = AuthFactory.isAuthenticated();

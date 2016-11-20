@@ -159,7 +159,7 @@
                  storeUserCredentials({ username: loginData.username, admin: response.admin, token: response.token });
                  //remind the controller that the login is successful
                  // display user name on navbar
-                 $state.go('app', {}, { reload: true });
+                 $state.go($state.current, {}, { reload: true });
                  $rootScope.$broadcast('login:Successful');
              },
              // failure function
