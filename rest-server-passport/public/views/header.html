@@ -25,7 +25,12 @@
                      <i class="fa fa-heart-o"></i> Favorites</a></li>
                      <li ng-class="{active: stateis('app.contactus')}"><a ui-sref="app.contactus">
                      <i class="fa fa-envelope-o"></i> Contact</a></li>
-                    <li ng-class="{active: stateis('app.reservtions')}"><a ui-sref="app">
+                    <li ng-class="{active: stateis('app.promotions')}">
+                        <a ui-sref="app.promotions">
+                            <i class="fa fa-star"></i> Promotions
+                        </a>
+                    </li>
+                    <li ng-class="{active: stateis('app.reservations')}"><a ui-sref="app">
                         <span class="glyphicon glyphicon-cutlery"
                               aria-hidden="true"></span> Reservations</a></li>
                 </ul>

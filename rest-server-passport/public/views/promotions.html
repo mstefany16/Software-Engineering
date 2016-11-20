@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Promotions</li>
+            </ul>
+        </div>
+        <div class="col-xs-12">
+            <h3>Promotions</h3>
+        </div>
+    </div>
+    <div class="row row-content">
+            <!--TODO
+            add support for addMenuItem and deleteMenuItem buttons-->
+
+            <button ng-if="admin" ng-click="openAddPromo()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                Add promotion
+            </button>
+
+            <button ng-if="admin" ng-click="toggleDelete()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                {{showDelete ? 'Hide Delete Button':'Show Delete Button'}}
+            </button>
+            <div class="tab-content">
+                <ul class="media-list tab-pane fade in active">
+                    <li class="media" ng-repeat="promotion in promotions| filter:filtText">
+                        <div class="media-left media-middle">
+                            <a ui-sref="app.dishdetails({id: dish._id})">
+                                <img class="media-object img-thumbnail"
+                                     ng-src={{promotion.image}} alt="Uthappizza">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h2 class="media-heading">
+                                {{promotion.name}}
+                                <span class="label label-danger label-xs">{{promotion.label}}</span>
+                                <span class="badge">{{promotion.price/100 | currency}}</span>
+                            </h2>
+                            <span class="media-heading">{{promotion.description}}</span>
+                            <button ng-if="admin" ng-show="showDelete" ng-click="removePromo(dish._id)" class="btn btn-xs btn-default pull-right"
+                                    type="button">
+                                <i class="fa fa-remove"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+    </div>
+</div>

@@ -68,6 +68,16 @@
               }
           })
 
+          .state('app.promotions', {
+              url: 'promotions/:id',
+              views: {
+                  'content@': {
+                      templateUrl: 'views/promotions.html',
+                      controller: 'PromoController'
+                  }
+              }
+          })
+
           // route for the dishdetail page
           .state('app.favorites', {
               url: 'favorites',

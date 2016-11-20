@@ -8,7 +8,6 @@
             
             $scope.tab = 1;
             $scope.filtText = '';
-            $scope.showDetails = false;
             $scope.showFavorites = false;
             $scope.showDelete = false;
             $scope.showMenu = false;
@@ -44,10 +43,6 @@
                 return ($scope.tab === checkTab);
             };
 
-            $scope.toggleDetails = function () {
-                $scope.showDetails = !$scope.showDetails;
-            };
-
             $scope.toggleFavorites = function () {
                 $scope.showFavorites = !$scope.showFavorites;
             };
@@ -78,6 +73,47 @@
 
             }])
 
+
+    .controller('PromoController', ['$scope', '$state', 'promotionFactory', 'AuthFactory', 'ngDialog',
+            function ($scope, $state, promotionFactory, AuthFactory, ngDialog) {
+
+                $scope.tab = 1;
+                $scope.filtText = '';
+                $scope.showDelete = false;
+                $scope.showAdd = false;
+                $scope.message = "Loading ...";
+                $scope.admin = AuthFactory.getAdmin();
+                $scope.user = AuthFactory.isAuthenticated();
+
+                promotionFactory.query(
+                    function (response) {
+                        $scope.promotions = response;
+                        $scope.showMenu = true;
+                    },
+                    function (response) {
+                        $scope.message = "Error: " + response.status + " " + response.statusText;
+                    });
+
+                $scope.toggleDelete = function () {
+                    $scope.showDelete = !$scope.showDelete;
+                };
+
+                $scope.openAddPromo = function () {
+                    ngDialog.open({
+                        template: 'views/addpromo.html',
+                        scope: $scope, className: 'ngdialog-theme-default',
+                        controller: "AddPromoController"
+                    });
+                };
+                $scope.removePromo = function (dishid) {
+                    console.log('Remove promotion', dishid);
+                    promotionFactory.delete({ id: dishid });
+                    $scope.showDelete = !$scope.showDelete;
+                    $state.go('app.promotions', {}, { reload: true });
+
+                };
+
+            }])
     .controller('AddController', ['$scope','$state', 'menuFactory', 'AuthFactory','ngDialog',
             function ($scope, $state, menuFactory, AuthFactory, ngDialog) {
 
@@ -117,9 +153,48 @@
 
                     };
                 };
-
- 
             }])
+
+    .controller('AddPromoController', ['$scope', '$state', 'promotionFactory', 'AuthFactory', 'ngDialog',
+            function ($scope, $state, promotionFactory, AuthFactory, ngDialog) {
+
+
+                $scope.admin = AuthFactory.getAdmin();
+                $scope.message = "Loading ...";
+
+                $scope.myPromo = {
+                    name: "",
+                    image: "",
+                    label: "",
+                    price: "",
+                    description: "",
+                    featured: false
+
+                };
+
+                $scope.addPromo = function () {
+                    console.log('Add promotion');
+                    promotionFactory.save($scope.myPromo);
+
+                    ngDialog.close();
+                    $state.go('app.promotions', {}, { reload: true });
+
+                    $scope.addPromoForm.$setPristine();
+
+                    $scope.myPromo = {
+                        name: "",
+                        image: "",
+                        label: "",
+                        price: "",
+                        description: "",
+                        featured: false
+
+                    };
+                };
+
+
+            }])
+
 
         .controller('ContactController', ['$scope', '$state', 'feedbackFactory','AuthFactory',
             function ($scope, $state, feedbackFactory,AuthFactory) {
