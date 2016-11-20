@@ -21,8 +21,6 @@
                          <span class="glyphicon glyphicon-list-alt"
                          aria-hidden="true"></span> 
                          Menu</a></li>
-                     <li ng-class="{active: stateis('app.favorites')}"><a ui-sref="app.favorites">
-                     <i class="fa fa-heart-o"></i> Favorites</a></li>
                      <li ng-class="{active: stateis('app.contactus')}"><a ui-sref="app.contactus">
                      <i class="fa fa-envelope-o"></i> Contact</a></li>
                     <li ng-class="{active: stateis('app.promotions')}">
@@ -30,7 +28,7 @@
                             <i class="fa fa-star"></i> Promotions
                         </a>
                     </li>
-                    <li ng-class="{active: stateis('app.reservations')}"><a ui-sref="app">
+                    <li  ng-if="loggedIn" ng-class="{active: stateis('app.reservations')}"><a ui-sref="app.reservations">
                         <span class="glyphicon glyphicon-cutlery"
                               aria-hidden="true"></span> Reservations</a></li>
                 </ul>

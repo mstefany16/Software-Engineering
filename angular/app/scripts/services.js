@@ -44,19 +44,6 @@
 
   }])
 
-
-  .factory('favoriteFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
-
-
-      return $resource(baseURL + "favorites/:id", null, {
-          'update': {
-              method: 'PUT'
-          },
-          'query': { method: 'GET', isArray: false }
-      });
-
-  }])
-
   .factory('feedbackFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
 

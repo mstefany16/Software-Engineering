@@ -3,8 +3,8 @@
 
     angular.module('confusionApp')
 
-        .controller('MenuController', ['$scope', '$state', 'menuFactory', 'favoriteFactory', 'AuthFactory', 'ngDialog',
-            function ($scope, $state, menuFactory, favoriteFactory, AuthFactory, ngDialog) {
+        .controller('MenuController', ['$scope', '$state', 'menuFactory', 'AuthFactory', 'ngDialog',
+            function ($scope, $state, menuFactory, AuthFactory, ngDialog) {
 
                 $scope.tab = 1;
                 $scope.filtText = '';
@@ -43,18 +43,10 @@
                     return ($scope.tab === checkTab);
                 };
 
-                $scope.toggleFavorites = function () {
-                    $scope.showFavorites = !$scope.showFavorites;
-                };
                 $scope.toggleDelete = function () {
                     $scope.showDelete = !$scope.showDelete;
                 };
 
-                $scope.addToFavorites = function (dishid) {
-                    console.log('Add to favorites', dishid);
-                    favoriteFactory.save({ _id: dishid });
-                    $scope.showFavorites = !$scope.showFavorites;
-                };
 
                 $scope.openAdd = function () {
                     ngDialog.open({
@@ -337,57 +329,6 @@
 
         }])
 
-        .controller('FavoriteController', ['$scope', '$state', 'favoriteFactory', function ($scope, $state, favoriteFactory) {
-
-            $scope.tab = 1;
-            $scope.filtText = '';
-            $scope.showDetails = false;
-            $scope.showDelete = false;
-            $scope.showMenu = false;
-            $scope.message = "Loading ...";
-
-            favoriteFactory.query(
-                function (response) {
-                    $scope.dishes = response.dishes;
-                    $scope.showMenu = true;
-                },
-                function (response) {
-                    $scope.message = "Error: " + response.status + " " + response.statusText;
-                });
-
-            $scope.select = function (setTab) {
-                $scope.tab = setTab;
-
-                if (setTab === 2) {
-                    $scope.filtText = "appetizer";
-                } else if (setTab === 3) {
-                    $scope.filtText = "mains";
-                } else if (setTab === 4) {
-                    $scope.filtText = "dessert";
-                } else {
-                    $scope.filtText = "";
-                }
-            };
-
-            $scope.isSelected = function (checkTab) {
-                return ($scope.tab === checkTab);
-            };
-
-            $scope.toggleDetails = function () {
-                $scope.showDetails = !$scope.showDetails;
-            };
-
-            $scope.toggleDelete = function () {
-                $scope.showDelete = !$scope.showDelete;
-            };
-
-            $scope.deleteFavorite = function (dishid) {
-                console.log('Delete favorites', dishid);
-                favoriteFactory.delete({ id: dishid });
-                $scope.showDelete = !$scope.showDelete;
-                $state.go($state.current, {}, { reload: true });
-            };
-        }])
 
         // handles logging in and logging out and registration
         .controller('HeaderController', ['$scope', '$state', '$rootScope', 'ngDialog', 'AuthFactory', function ($scope, $state, $rootScope, ngDialog, AuthFactory) {
@@ -510,6 +451,7 @@
             };
         }])
 
+    //    Reservation Dialog controller
     .controller('ReservationController', ['$scope', '$state', 'reservationFactory', 'AuthFactory',
             function ($scope, $state, reservationFactory, AuthFactory) {
 
@@ -549,5 +491,11 @@
 
             }])
 
-    ;
+    //Reservation page controller
+    .controller('ReservationPageController')
+
+
+
+
+
 } )();
