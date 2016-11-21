@@ -7,10 +7,11 @@
         <form role="form" name="sendForm" ng-submit="sendReservation()" novalidate>
             <div class="form-group">
                 <label for="guests">Number Of Guest(s) (select one)</label>
-                <select class="form-control" id="guests">
+                <select class="form-control" ng-model="myreservation.guests" id="guests" required>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
+                    <option>4</option>
                     <option>5</option>
                     <option>6</option>
                 </select>
@@ -28,22 +29,22 @@
                 <label for="time">Time (PM)</label>
                 <div id="time">
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="5" value="5" checked>5
+                        <input name="five" type="radio" id="5" value=5  ng-model="myreservation.time" checked>5
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="6" value="6">6
+                        <input name="six" type="radio" id="6" value=6 ng-model="myreservation.time">6
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="7" value="7">7
+                        <input name="seven" type="radio" id="7" value=7 ng-model="myreservation.time">7
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="8" value="8">8
+                        <input name="eight" type="radio" id="8" value=8 ng-model="myreservation.time">8
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="9" value="9">9
+                        <input name="nine" type="radio" id="9" value=9 ng-model="myreservation.time">9
                     </label>
                     <label class="radio-inline">
-                        <input name="n" type="radio" id="10" value="10">10
+                        <input name="ten" type="radio" id="10" value=10 ng-model="myreservation.time">10
                     </label>
                 </div>
             </div>
@@ -53,10 +54,10 @@
                 <label for="section">Section </label>
                 <div id="section">
                     <label class="radio-inline">
-                        <input name="section" type="radio" id="inside" value="inside" checked>Inside
+                        <input name="section" type="radio" id="inside" value="inside" ng-model="myreservation.section" checked>Inside
                     </label>
                     <label class="radio-inline">
-                        <input name="section" type="radio" id="outside" value="outside">Outside
+                        <input name="section" type="radio" id="outside" value="outside" ng-model="myreservation.section">Outside
                     </label>
                 </div>
             </div>

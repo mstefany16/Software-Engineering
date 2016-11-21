@@ -87,7 +87,18 @@
                       controller: 'FavoriteController'
                   }
               }
-          });
+          })
+                // route for the reservations page
+          .state('app.reservations', {
+              url: 'reservations',
+              views: {
+                  'content@': {
+                      templateUrl: 'views/reservations.html',
+                      controller: 'ReservationPageController'
+                  }
+              }
+          })
+      ;
 
       $urlRouterProvider.otherwise('/');
   })

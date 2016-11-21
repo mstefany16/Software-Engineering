@@ -416,8 +416,8 @@
                     template: 'views/reserve.html',
                     scope: $scope, className: 'ngdialog-theme-default',
                     controller: "ReservationController"
-                })
-            }
+                });
+            };
 
             $scope.logOut = function () {
                 AuthFactory.logout();
@@ -517,13 +517,6 @@
                 $scope.user = AuthFactory.isAuthenticated();
                 $scope.message = "Loading...";
 
-                reservationFactory.query(
-                    function (response) {
-                        $scope.reservation = response;
-                    },
-                    function (response) {
-                        $scope.message = "Error: " + response.status + " " + response.statusText;
-                    });
 
                 $scope.myreservation = {
                     guests: 1,
@@ -533,8 +526,8 @@
                 };
 
                 $scope.sendReservation = function () {
-
-                    reservationFactory.save($scope.myreservation);
+                   
+                    reservationFactory.reserve($scope.myreservation);
 
                     $state.go($state.current, {}, { reload: true });
 
@@ -548,6 +541,8 @@
                 };
 
             }])
+
+    .controller('ReservationPageController')
 
     ;
 } )();

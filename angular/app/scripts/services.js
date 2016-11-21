@@ -68,13 +68,38 @@
 
   }])
 
-.factory('reservationFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
+.factory('reservationFactory', ['$resource', 'baseURL','ngDialog','$state', function ($resource, baseURL, ngDialog, $state) {
 
-    return $resource(baseURL + "reservations/reserve/:id", null, {
-        'update': {
-            method: 'PUT'
+    var reservationFac = {};
+
+    reservationFac.get = function () {
+        $resource(baseURL + "reservations/reserve/:id", null, {
+            'update': {
+                method: 'PUT'
+            }
+        });
+    };
+
+    reservationFac.reserve = function (reserveData) {
+        $resource(baseURL + "reservations/reserve").save(reserveData, function (response) {
+
+            var message = '\
+                <div class="ngdialog-message">\
+                <div><h3>Reservation Status:</h3></div>' +
+                '<div><p>' + response.status + '</p><p>' +
+               '<div class="ngdialog-buttons">\
+                    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click=confirm("OK")>OK</button>\
+                </div>';
+
+            ngDialog.openConfirm({ template: message, plain: 'true' });
+           
         }
-    });
+        );
+
+        $state.go('views/reserve.html', {}, { reload: true });
+    };
+
+    return reservationFac;
 
 }])
 
