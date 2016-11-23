@@ -57,17 +57,6 @@
               }
           })
 
-          // route for the dishdetail page
-          .state('app.dishdetails', {
-              url: 'menu/:id',
-              views: {
-                  'content@': {
-                      templateUrl: 'views/dishdetail.html',
-                      controller: 'DishDetailController'
-                  }
-              }
-          })
-
           .state('app.promotions', {
               url: 'promotions/:id',
               views: {
@@ -78,16 +67,7 @@
               }
           })
 
-          // route for the dishdetail page
-          .state('app.favorites', {
-              url: 'favorites',
-              views: {
-                  'content@': {
-                      templateUrl: 'views/favorites.html',
-                      controller: 'FavoriteController'
-                  }
-              }
-          })
+
                 // route for the reservations page
           .state('app.reservations', {
               url: 'reservations',

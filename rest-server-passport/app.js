@@ -24,7 +24,6 @@ var users = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
-var favoriteRouter = require('./routes/favoriteRouter');
 var reservationRouter = require('./routes/reservationRouter');
 var feedbackRouter = require('./routes/feedbackRouter');
 
@@ -62,7 +61,6 @@ app.use('/users', users);
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
 app.use('/leadership',leaderRouter);
-app.use('/favorites', favoriteRouter);
 app.use('/reservations', reservationRouter);
 app.use('/feedback', feedbackRouter);
 

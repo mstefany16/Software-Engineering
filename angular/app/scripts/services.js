@@ -13,15 +13,6 @@
 
   }])
 
-  .factory('commentFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
-
-      return $resource(baseURL + "dishes/:id/comments/:commentId", { id: "@Id", commentId: "@CommentId" }, {
-          'update': {
-              method: 'PUT'
-          }
-      });
-
-  }])
 
   .factory('promotionFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
@@ -44,18 +35,6 @@
 
   }])
 
-
-  .factory('favoriteFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
-
-
-      return $resource(baseURL + "favorites/:id", null, {
-          'update': {
-              method: 'PUT'
-          },
-          'query': { method: 'GET', isArray: false }
-      });
-
-  }])
 
   .factory('feedbackFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
