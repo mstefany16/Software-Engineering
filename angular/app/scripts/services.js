@@ -81,14 +81,6 @@
 
     var reservationFac = {};
 
-    reservationFac.get = function () {
-        $resource(baseURL + "reservations/:id", null, {
-            'update': {
-                method: 'PUT'
-            }
-        });
-    };
-
 
     reservationFac.reserve = function (reserveData) {
         $resource(baseURL + "reservations/").save(reserveData, function (response) {

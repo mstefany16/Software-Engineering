@@ -549,9 +549,9 @@
 
                 $scope.myreservations = myReservationFactory.query();
 
-                $scope.cancel = function (reserveid) {
+                $scope.cancelReservation = function (reserveid) {
                     console.log('Remove dish', reserveid);
-                    myReservationFactory.delete({ _id: reserveid });
+                    myReservationFactory.delete({ id: reserveid });
                     $state.go('app.reservations', {}, { reload: true });
 
                 };
