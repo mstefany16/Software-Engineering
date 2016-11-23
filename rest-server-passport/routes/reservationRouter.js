@@ -9,14 +9,15 @@ var Verify = require('./verify');
 var reservationRouter = express.Router();
 reservationRouter.use(bodyParser.json());
 
-reservationRouter.route('/reserve')
+reservationRouter.route('/')
 .all(Verify.verifyOrdinaryUser)
 .get(function (req, res, next){
-    Reservations.find(req.query)
+  var userId = req.decoded._id;
+    Reservations.find({
+    })
       .populate('postedBy')
       .exec(function (err, reservation) {
         if (err) return next(err);
-        console.log(reservation.postedBy);
         res.json(reservation);
     });
 })
@@ -27,8 +28,11 @@ reservationRouter.route('/reserve')
   var userGuests = req.body.guests;
   var userSection = req.body.section;
 
-  Reservations.findOneAndUpdate({"time": userTime, "section": userSection, "date": userDate, "guests": userGuests, "reserved": false},
-      { $set:{reserved: true}},
+  req.body.postedBy = req.decoded._id;
+
+  Reservations.findOneAndUpdate({"time": userTime, "section": userSection,
+  "date": userDate, "guests": userGuests, "reserved": false},
+      { $set:{reserved: true, postedBy: req.body.postedBy}},
       {returnNewDocument: true},
       function (err, reservation) {
         if (err) return next(err);
@@ -38,7 +42,7 @@ reservationRouter.route('/reserve')
               status: 'Table not found for the following information: time: '+ userTime +
               ', date: ' + userDate +
               ', guests: ' + userGuests +
-              ', and section: ' + userSection 
+              ', and section: ' + userSection
             });
         }
         else{
@@ -52,15 +56,35 @@ reservationRouter.route('/reserve')
       }
       })
 
+    })
+    .delete(function (req, res, next) {
+      var userId = req.decoded._id;
+
+      Reservations
+        .findOneAndRemove({
+          postedBy: userId
+        }, function (err, resp) {
+          if (err) next (err);
+          res.json(resp);
+        });
     });
-reservationRouter.route('/reserve/:reserveId')
+
+reservationRouter.route('/myreservations')
+.all(Verify.verifyOrdinaryUser)
     .get(function (req, res, next){
-        Reservations.findById(req.params.reserveId)
+      var userId = req.decoded._id;
+        Reservations.find({postedBy: userId})
           .populate('postedBy')
           .exec(function (err, reservation) {
             if (err) return next(err);
             res.json(reservation);
         });
     })
-
+reservationRouter.route('/myreservations/:reserveId')
+    .delete(function (req, res, next) {
+      Reservations.findByIdAndRemove(req.params.reserveId, function (err, resp) {
+        if (err) next(err);
+          res.json(resp);
+      });
+    });
 module.exports = reservationRouter;

@@ -68,20 +68,30 @@
 
   }])
 
+.factory('myReservationFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
+    return $resource(baseURL + "reservations/myreservations/:id", null, {
+        'update': {
+            method: 'PUT'
+        }
+    });
+}])
+
+
 .factory('reservationFactory', ['$resource', 'baseURL','ngDialog','$state', function ($resource, baseURL, ngDialog, $state) {
 
     var reservationFac = {};
 
     reservationFac.get = function () {
-        $resource(baseURL + "reservations/reserve/:id", null, {
+        $resource(baseURL + "reservations/:id", null, {
             'update': {
                 method: 'PUT'
             }
         });
     };
 
+
     reservationFac.reserve = function (reserveData) {
-        $resource(baseURL + "reservations/reserve").save(reserveData, function (response) {
+        $resource(baseURL + "reservations/").save(reserveData, function (response) {
 
             var message = '\
                 <div class="ngdialog-message">\

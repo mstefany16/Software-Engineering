@@ -66,7 +66,7 @@
                 $scope.removeDish = function (dishid) {
                     console.log('Remove dish', dishid);
                     menuFactory.delete({ id: dishid });
-                    $scope.showDelete = !$scope.showDelete;
+                    //$scope.showDelete = !$scope.showDelete;
                     $state.go('app.menu', {}, { reload: true });
 
                 };
@@ -519,7 +519,7 @@
 
 
                 $scope.myreservation = {
-                    guests: 1,
+                    guests: "1",
                     date: "",
                     time: 5,
                     section: "inside"
@@ -533,7 +533,7 @@
 
                     $scope.sendForm.$setPristine();
                     $scope.myreservation = {
-                        guests: 1,
+                        guests: "1",
                         date: "",
                         time: 5,
                         section: "inside"
@@ -542,7 +542,20 @@
 
             }])
 
-    .controller('ReservationPageController')
+       .controller('MyReservationController', ['$scope', '$state', 'myReservationFactory', 'AuthFactory',
+            function ($scope, $state, myReservationFactory, AuthFactory) {
+                
+                $scope.showDelete = true;
+
+                $scope.myreservations = myReservationFactory.query();
+
+                $scope.cancel = function (reserveid) {
+                    console.log('Remove dish', reserveid);
+                    myReservationFactory.delete({ _id: reserveid });
+                    $state.go('app.reservations', {}, { reload: true });
+
+                };
+            }])
 
     ;
 } )();

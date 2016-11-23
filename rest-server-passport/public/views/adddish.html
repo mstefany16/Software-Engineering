@@ -22,12 +22,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="category">Category</label>
-                <div>
-                    <input type="text" class="form-control" id="category" name="category" placeholder="Enter Category"
-                           ng-model="myDish.category">
-                    
-                </div>
+                <label for="guests">Category</label>
+                <select class="form-control" ng-model="myDish.category" id="category" required>
+                    <option>appetizer</option>
+                    <option>mains</option>
+                    <option>dessert</option>
+                </select>
             </div>
             <div class="form-group" >
                 <label for="label">Label</label>

@@ -94,7 +94,7 @@
               views: {
                   'content@': {
                       templateUrl: 'views/reservations.html',
-                      controller: 'ReservationPageController'
+                      controller: 'MyReservationController'
                   }
               }
           })
