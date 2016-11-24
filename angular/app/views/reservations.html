@@ -4,7 +4,7 @@
         <div class="col-xs-12">
             <ul class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li class="active">My reservations</li>
+                <li class="active">My Reservations</li>
             </ul>
         </div>
         <div class="col-xs-12">
@@ -16,27 +16,29 @@
         add support for addMenuItem and deleteMenuItem buttons-->
         <div class="tab-content">
             <ul class="media-list tab-pane fade in active">
+                <li class="media" ng-repeat="reservation in myreservations">
+                    <div class="media-left media-middle">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            <label>Date: </label>
+                            {{reservation.date}} <br>
+                            <label>Time: </label>
+                            {{reservation.time}}<br>
+                            <label>Number of Guest(s): </label>
+                            {{reservation.guests}}<br>
+                            <label>Location: </label>
+                            <span class="media-heading">{{reservation.section}}</span><br>
+                        </h4>
+                        <button ng-show="showDelete" ng-click="cancel(reserve._id)" class="btn btn-xs btn-default pull-right"
+                                type="button">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                    </div>
+                    <hr>
+                </li>
 
-                    <li class="media" ng-repeat="reservation in myreservations">
-                            <div class="media-left media-middle">
-
-                            </div>
-                            <div class="media-body">
-                                <h2 class="media-heading">
-                                    {{reservation.date}}
-                                    <span class="label label-danger label-xs">{{reservation.time}}</span>
-                                    <span class="badge">{{reservation.guests}}</span>
-                                </h2>
-                                <span class="media-heading">{{reservation.section}}</span>
-                                <button ng-show="showDelete" ng-click="cancelReservation(reservation._id)" class="btn btn-xs btn-default pull-right"
-                                        type="button"> Cancel Reservation
-                                    <i class="fa fa-remove"></i>
-                                </button>
-                            </div>
-</li>
-
-</ul>
+            </ul>
         </div>
-        </div>
-
+    </div>
 </div>

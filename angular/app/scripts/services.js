@@ -24,17 +24,6 @@
 
   }])
 
-  .factory('corporateFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
-
-
-      return $resource(baseURL + "leadership/:id", null, {
-          'update': {
-              method: 'PUT'
-          }
-      });
-
-  }])
-
 
   .factory('feedbackFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 

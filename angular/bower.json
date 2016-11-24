@@ -1,16 +1,20 @@
 {
-  "name": "conFusion",
+  "name": "virtual eats",
   "version": "1.0.0",
-  "description": "Website for an awesome restaurant",
+  "description": "Website for virtual eats restaurant",
   "main": "index.html",
   "moduleType": [],
   "keywords": [
-    "conFusion",
-    "Fusion",
+    "Virtual",
+    "Eats",
     "Restaurant"
   ],
   "authors": [
-    "Jogesh Muppala"
+    "Mabel Amaya",
+    "Nick Morales",
+    "Jim Louro",
+    "Kyle Roque"
+
   ],
   "license": "MIT",
   "homepage": "",

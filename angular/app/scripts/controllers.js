@@ -4,7 +4,7 @@
     angular.module('confusionApp')
 
         .controller('MenuController', ['$scope', '$state', 'menuFactory', 'AuthFactory', 'ngDialog',
-            function ($scope, $state, menuFactory, AuthFactory, ngDialog) {
+            function ($scope, $state, menuFactory,  AuthFactory, ngDialog) {
 
                 $scope.tab = 1;
                 $scope.filtText = '';
@@ -42,10 +42,12 @@
                     return ($scope.tab === checkTab);
                 };
 
+                $scope.toggleFavorites = function () {
+                    $scope.showFavorites = !$scope.showFavorites;
+                };
                 $scope.toggleDelete = function () {
                     $scope.showDelete = !$scope.showDelete;
                 };
-
 
                 $scope.openAdd = function () {
                     ngDialog.open({
@@ -99,6 +101,7 @@
                 $scope.removePromo = function (dishid) {
                     console.log('Remove promotion', dishid);
                     promotionFactory.delete({ id: dishid });
+                    $scope.showDelete = !$scope.showDelete;
                     $state.go('app.promotions', {}, { reload: true });
 
                 };
@@ -106,6 +109,8 @@
             }])
     .controller('AddController', ['$scope', '$state', 'menuFactory', 'AuthFactory', 'ngDialog',
             function ($scope, $state, menuFactory, AuthFactory, ngDialog) {
+
+
 
                 $scope.admin = AuthFactory.getAdmin();
                 $scope.message = "Loading ...";
@@ -210,6 +215,7 @@
 
                 };
 
+
                 $scope.sendFeedback = function () {
 
 
@@ -233,35 +239,27 @@
 
         
 
-        .controller('HomeController', ['$scope', 'menuFactory', 'corporateFactory', 'promotionFactory', function ($scope, menuFactory, corporateFactory, promotionFactory) {
-            $scope.showDish = false;
-            $scope.showLeader = false;
+        .controller('HomeController', ['$scope', 'promotionFactory', function ($scope,promotionFactory) {
+
             $scope.showPromotion = false;
             $scope.message = "Loading ...";
             
-            $scope.dish = menuFactory.query({
+            var promotions = promotionFactory.query({
                 featured: "true"
             })
                 .$promise.then(
                     function (response) {
-                        var dishes = response;
-                        $scope.dish = dishes[0];
-                        $scope.showDish = true;
+                        var promotions = response;
+                        $scope.promotion = promotions[0];
+                        $scope.showPromotion = true;
                     },
                     function (response) {
                         $scope.message = "Error: " + response.status + " " + response.statusText;
                     }
                 );
-
         }])
 
-        .controller('AboutController', ['$scope', 'corporateFactory', function ($scope, corporateFactory) {
-
-            $scope.leaders = corporateFactory.query();
-
-        }])
-
-
+        
         // handles logging in and logging out and registration
         .controller('HeaderController', ['$scope', '$state', '$rootScope', 'ngDialog', 'AuthFactory', function ($scope, $state, $rootScope, ngDialog, AuthFactory) {
 
