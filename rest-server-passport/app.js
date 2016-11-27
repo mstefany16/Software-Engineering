@@ -24,7 +24,8 @@ var users = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
-var favoritesRouter = require('./routes/favoriteRouter');
+var reservationRouter = require('./routes/reservationRouter');
+var feedbackRouter = require('./routes/feedbackRouter');
 
 
 var app = express();
@@ -34,8 +35,9 @@ app.all('*', function(req, res, next){
     console.log('req start: ',req.secure, req.hostname, req.url, app.get('port'));
   if (req.secure) {
     return next();
-  }
-    res.redirect('https://'+req.hostname+':'+app.get('secPort')+req.url);
+  };
+
+ res.redirect('https://'+req.hostname+':'+app.get('secPort')+req.url);
 });
 
 // view engine setup
@@ -59,7 +61,8 @@ app.use('/users', users);
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
 app.use('/leadership',leaderRouter);
-app.use('/favorites', favoritesRouter);
+app.use('/reservations', reservationRouter);
+app.use('/feedback', feedbackRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

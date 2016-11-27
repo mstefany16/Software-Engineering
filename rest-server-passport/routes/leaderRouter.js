@@ -63,4 +63,4 @@ leaderRouter.route('/:leaderId')
         });
 });
 
-module.exports = leaderRouter;
+module.exports = leaderRouter

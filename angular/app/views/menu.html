@@ -20,21 +20,14 @@
 
             <!--TODO
             add support for addMenuItem and deleteMenuItem buttons-->
-            <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
-                    type="button">
-                {{showDetails ? 'Hide Details':'Show Details'}}
+
+            <button ng-if="admin" ng-click="openAdd()" class="btn btn-xs btn-primary pull-right"
+                    type="button"> Add dish
             </button>
-            <button ng-click="toggleFavorites()" class="btn btn-xs btn-primary pull-right"
-                             type="button">
-            {{showFavorites ? 'Hide Favorite Button':'Show Favorite Button'}}
-        </button>
-            <button  class="btn btn-xs btn-primary pull-right"
+            
+            <button  ng-if = "admin" ng-click="toggleDelete()" class="btn btn-xs btn-primary pull-right"
                     type="button">
-                Add Item
-            </button>
-            <button class="btn btn-xs btn-primary pull-right"
-                    type="button">
-                Remove Item
+                {{showDelete ? 'Hide Delete Button':'Show Delete Button'}}
             </button>
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation"
@@ -71,11 +64,12 @@
                         <div class="media-body">
                             <h2 class="media-heading">{{dish.name}}
                                 <span class="label label-danger label-xs">{{dish.label}}</span>
-                                <span class="badge">{{dish.price/100 | currency}}</span></h2>
-                            <p ng-show="showDetails">{{dish.description}}</p>
-                            <button  ng-show="showFavorites" ng-click="addToFavorites(dish._id)" class="btn btn-xs btn-default pull-right"
-                                     type="button">
-                                <i class="fa fa-heart"></i>
+                                <span class="badge">{{dish.price/100 | currency}}</span>
+                                </h2>
+                            <span class="media-body">{{dish.description}}</span>
+                            <button ng-if = "admin" ng-show="showDelete" ng-click="removeDish(dish._id)" class="btn btn-xs btn-default pull-right"
+                                    type="button">
+                                <i class="fa fa-remove"></i>
                             </button>
                         </div>
                     </li>

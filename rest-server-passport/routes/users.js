@@ -55,13 +55,14 @@ router.post('/login', function(req, res, next) {
           err: 'Could not log in user'
         });
       }
-
+      var admin = user.admin;
       var token = Verify.getToken({"username":user.username, "_id":user._id,
       "admin":user.admin});
       res.status(200).json({
         status: 'Login successful!',
         success: true,
-        token: token
+        token: token,
+        admin : admin
       });
     });
   })(req,res,next);
@@ -72,6 +73,32 @@ router.get('/logout', function(req, res) {
   res.status(200).json({
     status: 'Bye!'
   });
+});
+
+
+router.get('/account', Verify.verifyOrdinaryUser, function(req, res, next){
+
+  var userUsername = req.decoded.username;
+  User.findOne({
+    username: userUsername
+  })
+  .populate('postedBy')
+  .exec(function (err, useracc) {
+    if (err) return next(err);
+    res.json(useracc);
+  });
+
+})
+
+router.delete('/account', Verify.verifyOrdinaryUser, function(req, res, next){
+  var userId = req.decoded._id;
+  var userUsername = req.decoded.username;
+  console.log(userUsername);
+  User.findByIdAndRemove(userId, function (err, resp) {
+    if (err) next(err);
+      res.json(resp);
+    });
+
 });
 
 router.get('/facebook', passport.authenticate('facebook'),

@@ -1,0 +1,23 @@
+﻿<div class="ngdialog-message">
+    <div class="">
+        <h3>Delete Account </h3>
+    </div>
+    <div class="">&nbsp;</div>
+    <div class="">
+        <form ng-submit="deleteAccount()">
+            Are you sure you want to delete your account? 
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="yes"> Yes
+                </label>
+                <label>
+                    <input type="checkbox" ng-model="no"> No
+                </label>
+            </div>
+            <button type="submit" class="btn btn-info btn-sm">Delete Account</button>
+            <button type="button" class="btn btn-default btn-sm" ng-click=closeThisDialog("Cancel")>Cancel</button> &nbsp; &nbsp;
+        </form>
+    </div>
+    <div>
+    </div>
+</div>

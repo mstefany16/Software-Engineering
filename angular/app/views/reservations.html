@@ -1,0 +1,42 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">My reservations</li>
+            </ul>
+        </div>
+        <div class="col-xs-12">
+            <h3>Reservations</h3>
+        </div>
+    </div>
+    <div class="row row-content">
+        <!--TODO
+        add support for addMenuItem and deleteMenuItem buttons-->
+        <div class="tab-content">
+            <ul class="media-list tab-pane fade in active">
+
+                    <li class="media" ng-repeat="reservation in myreservations">
+                            <div class="media-left media-middle">
+
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">
+                                    {{reservation.date}}
+                                    <span class="label label-danger label-xs">{{reservation.time}}</span>
+                                    <span class="badge">{{reservation.guests}}</span>
+                                </h2>
+                                <span class="media-heading">{{reservation.section}}</span>
+                                <button ng-show="showDelete" ng-click="cancelReservation(reservation._id)" class="btn btn-xs btn-default pull-right"
+                                        type="button"> Cancel Reservation
+                                    <i class="fa fa-remove"></i>
+                                </button>
+                            </div>
+</li>
+
+</ul>
+        </div>
+        </div>
+
+</div>

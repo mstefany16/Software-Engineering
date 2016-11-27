@@ -141,7 +141,7 @@ dishRouter.route('/:dishId/comments')
 
           if(dish.comments.id(req.params.commentId).postedBy
              != req.decoded._id){
-               var err = new Error('You are not authorized to perform this operation!');
+               var err = new Error('You are not authorized to perform this operation!')
                err.status - 403;
                return next(err);
              }
