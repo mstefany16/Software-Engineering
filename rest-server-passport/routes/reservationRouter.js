@@ -31,7 +31,7 @@ reservationRouter.route('/')
   req.body.postedBy = req.decoded._id;
 
   Reservations.findOneAndUpdate({"time": userTime, "section": userSection,
-  "date": userDate, "guests": userGuests, "reserved": false},
+  "date": userDate, "reserved": false},
       { $set:{reserved: true, postedBy: req.body.postedBy}},
       {returnNewDocument: true},
       function (err, reservation) {
