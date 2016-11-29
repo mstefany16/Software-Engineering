@@ -25,12 +25,11 @@
                             {{reservation.date}} <br>
                             <label>Time: </label>
                             {{reservation.time}}<br>
-                            <label>Number of Guest(s): </label>
-                            {{reservation.guests}}<br>
+
                             <label>Location: </label>
                             <span class="media-heading">{{reservation.section}}</span><br>
                         </h4>
-                        <button ng-show="showDelete" ng-click="cancel(reserve._id)" class="btn btn-xs btn-default pull-right"
+                        <button ng-show="showDelete" ng-click="cancelReservation(reservation._id)" class="btn btn-xs btn-default pull-right"
                                 type="button">
                             <i class="fa fa-remove"></i>
                         </button>
